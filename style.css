@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600&display=swap');
+
+
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/fundo\(2\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 10px;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0px 16px;
+    position: absolute;
+    top: 0px;
+}
+header ul{
+    width: fit-content;
+    display: flex;
+    list-style-type: none;
+}
+header ul li{
+    padding: 10px 20px;
+    margin: 3px;
+    cursor: not-allowed;
+    border-bottom: 2px solid transparent;
+}
+header ul li:first-child{
+    cursor: pointer;
+}
+header ul li:hover{
+    background-color: rgba(240, 248, 255, 0.1);
+}
+.btnsHeader{
+    border-bottom-color: transparent;
+    font-weight: normal;
+}
+.btnsHeaderSelecionado{
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+header button{
+    background: none;
+    padding: 10px;
+    cursor: not-allowed;
+    border: none;
+}
+header button svg{
+    width: 30px;
+    height: 30px;
+}
+
+main{
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+
+.cntrName{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.boxInfosMove{
+    width: 80%;
+    height: fit-content;
+}
+.boxInfosMove > p{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.boxInfosMove > h1{
+    font-size: 7em;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 600;
+
+}
+.boxInfosMove > span{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.boxInfosMove > span .btnTrailer{
+    font-weight: bold;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.btnTrailer svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 14px;
+}
+.boxInfosMove > span p{
+    margin-left: 40px;
+}
+.cntrImgMain{
+    height: 100%;
+    display: flex;
+}
+.cntrImgMain img{
+    width: auto;
+    height: 100%;
+}
+.cntrSinopse{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxSinopse{
+    width: 80%;
+    font-size: 1.1em;
+    line-height: 25px;
+    font-size: 600;
+}
+.boxSinopse h2{
+    margin-bottom: 10px;
+    display: none;
+}
+
+.cntrTrailer{
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.cntrTrailer svg{
+    width: 34px;
+    height: 34px;
+    padding: 6px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    cursor: pointer;
+}
+.cntrTrailer iframe{
+    width: 80%;
+    height: 80%;
+    box-shadow: 0px 0px 200px 30px black;
+}
+
+
+@media (max-width: 1200px){
+    .cntrName {
+        justify-content: center;
+    }
+    .boxInfosMove > h1 {
+        font-size: 6em;
+    }
+}
+@media (max-width: 1000px){
+    .boxInfosMove > span .btnTrailer {
+        padding: 10px 20px;
+    }
+    .boxInfosMove > h1 {
+        font-size: 5em;
+    }
+}
+@media (max-width: 960px){
+    main {
+        flex-wrap: wrap;
+    }
+    .cntrName, .cntrImgMain {
+        width: 50%;
+        justify-content: center;
+    }
+    .cntrName {
+        justify-content: flex-end;
+    }
+    .cntrSinopse {
+        padding: 20px 0px;
+        border-top: 2px solid rgba(0, 0, 0, 0.3);
+        background-color: #80857e;
+
+    }
+    .boxSinopse h2{
+        display: block;
+    }
+
+}
+@media (max-width: 700px){
+    .cntrName {
+        justify-content: flex-start;
+    }
+    .boxInfosMove {
+
+        margin-left: 30px;
+    }
+    .boxInfosMove > span .btnTrailer {
+        padding: 10px 10px;
+    }
+    .btnTrailer svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+    }
+}
+@media (max-width: 640px){
+    header ul li:last-child {
+        display: none;
+    }
+    .boxInfosMove > span .btnTrailer {
+        font-weight: normal;
+    }
+    .boxInfosMove > span {
+        flex-direction: column;
+    }
+    .boxInfosMove > span p {
+        margin-left: 0px;
+    }
+    .boxInfosMove > span .btnTrailer {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+}
+@media (max-width: 600px){
+    .boxInfosMove > h1 {
+        font-size: 4.2em;
+        z-index: 1;
+    }
+    .cntrName {
+        z-index: 1;
+    }
+
+    .boxInfosMove > span {
+        margin-top: 25px;
+    }
+    .boxInfosMove > p {
+        margin-bottom: 0px;
+    }
+    .cntrImgMain {
+        justify-content: flex-end;
+    }
+}
